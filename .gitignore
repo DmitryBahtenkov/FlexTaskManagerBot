@@ -11,3 +11,4 @@ redis.conf/
 /FTM.Telegram/appsettings.Development.json
 .vs/
 FTMV2.sln.DotSettings.user
+.sonarqube

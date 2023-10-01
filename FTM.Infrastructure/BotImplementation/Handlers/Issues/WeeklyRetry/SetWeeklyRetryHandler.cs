@@ -27,12 +27,12 @@ namespace FTM.Infrastructure.BotImplementation.Handlers.Issues.WeeklyRetry
         {
             var issueParam = ExactData(update.GetCallbackData(), 1) ?? throw new BusinessException("Задача не найдена");
             var issueId = int.Parse(issueParam);
-            var @params = ExactData(update.GetCallbackData(), 2)?.Split('-');
+            var @params = ExactData(update.GetCallbackData(), 2)?.Split('-') ?? Array.Empty<string?>();
 
             List<int> selectedParam = new List<int>();
             foreach (var item in @params)
             {
-                if (int.TryParse(item, out int i))
+                if (int.TryParse(item, out var i))
                 {
                     selectedParam.Add(i);
                 }

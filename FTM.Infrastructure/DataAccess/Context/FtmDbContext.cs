@@ -1,3 +1,4 @@
+#nullable disable
 using System.ComponentModel.DataAnnotations.Schema;
 using FTM.Domain.Models.BotStatusModel;
 using FTM.Domain.Models.IssueModel;
@@ -21,8 +22,7 @@ public class FtmDbContext : DbContext
     {
         optionsBuilder
             .UseLazyLoadingProxies()
-            .UseNpgsql(Environment.GetEnvironmentVariable("DATABASE_CONNECTION") ??
-                       "Host=localhost;Port=5432;Database=ftm_dev;Username=ftm_dev_owner;Password=Mr4xa7uQRNI4bikR");
+            .UseNpgsql(Environment.GetEnvironmentVariable("DATABASE_CONNECTION") ?? throw new Exception("Set connection string into DATABASE_CONNECTION environment variable"));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
