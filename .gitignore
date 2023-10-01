@@ -1,0 +1,13 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+pgadmin/
+pgdata/
+redis.conf/
+.vscode/
+.idea/
+/FTM.Telegram/appsettings.Development.json
+.vs/
+FTMV2.sln.DotSettings.user

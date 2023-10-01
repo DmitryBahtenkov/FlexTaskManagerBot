@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="Dict\time_words.txt" />
+      <EmbeddedResource Include="Dict\time_words.txt" />
+      <EmbeddedResource Remove="Hors.Tests\**" />
+      <None Remove="Hors.Tests\**" />
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Remove="Hors.Tests\**" />
+    </ItemGroup>
+</Project>
