@@ -8,11 +8,11 @@ using MimeKit;
 
 namespace FTM.Infrastructure.Services;
 
-public class EmailServiceMock : IEmailService
+public class EmailService : IEmailService
 {
     private readonly ILogger<IEmailService> _logger;
 
-    public EmailServiceMock(ILogger<IEmailService> logger)
+    public EmailService(ILogger<IEmailService> logger)
     {
         _logger = logger;
     }

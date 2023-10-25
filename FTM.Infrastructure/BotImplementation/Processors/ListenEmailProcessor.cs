@@ -27,7 +27,6 @@ public class ListenEmailProcessor : IBotProcessor<Update>
         _userRepository = userRepository;
     }
 
-    [EmailAddress]
     public BotState State => BotState.Register;
     public async Task Process(Update update, BotStatus botStatus)
     {

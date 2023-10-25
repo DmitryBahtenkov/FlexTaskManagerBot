@@ -65,7 +65,7 @@ public static class ServiceCollectionExtensions
         serviceCollection.AddScoped<BotClientService>();
         serviceCollection.AddScoped<MessageAttachmentService>();
 
-        serviceCollection.AddScoped<IEmailService, EmailServiceMock>();
+        serviceCollection.AddScoped<IEmailService, EmailService>();
         
         serviceCollection.AddScoped<ICurrentUserService, CurrentUserService>();
         serviceCollection.AddScoped<MessengerService>();
